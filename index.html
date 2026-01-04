@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ChatApp Illustration. A Frontend mentor challenge built HTML5 CSS3 and BEM"
+    />
+    <meta
+      name="keywords"
+      content="CSS3, Responsive Design, Frontend Mentor, HTML5, BEM, Mobile First"
+    />
+    <meta name="author" content="John Prosper" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Google Font | Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | Chat App Illustration</title>
+  </head>
+  <body>
+    <div class="container">
+      <main class="app">
+        <!-- Phone/Chat Interface -->
+        <article class="phone" inert aria-hidden="true">
+          <div class="phone__notch"></div>
+
+          <div class="phone__screen">
+            <header class="chat-header">
+              <button class="chat-header__back" aria-label="Go back" disabled>
+                <i data-lucide="chevron-left" width="15" stroke-width="3"></i>
+              </button>
+
+              <div class="chat-header__user">
+                <img
+                  src="./images/avatar.jpg"
+                  alt="Samuel Green"
+                  class="chat-header__avatar"
+                />
+                <div class="chat-header__info">
+                  <h1 class="chat-header__name">Samuel Green</h1>
+                  <p class="chat-header__status">Available to Walk</p>
+                </div>
+              </div>
+
+              <button
+                class="chat-header__menu"
+                aria-label="Menu options"
+                disabled
+              >
+                <i data-lucide="more-vertical" width="13"></i>
+              </button>
+            </header>
+
+            <div class="chat">
+              <!-- Received messages (first group) -->
+              <div class="received__messages">
+                <div class="message message--received">
+                  <p class="message__text">
+                    That sounds great. I'd be happy with that.
+                  </p>
+                </div>
+
+                <div class="message message--received">
+                  <p class="message__text">
+                    Could you send over some pictures of your dog, please?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Outgoing images -->
+              <div class="sent__images">
+                <img
+                  src="./images/dog-image-1.jpg"
+                  alt="Dog photo 1"
+                  class="message__image"
+                />
+                <img
+                  src="./images/dog-image-2.jpg"
+                  alt="Dog photo 2"
+                  class="message__image"
+                />
+                <img
+                  src="./images/dog-image-3.jpg"
+                  alt="Dog photo 3"
+                  class="message__image"
+                />
+              </div>
+
+              <!-- Sent messages -->
+              <div class="sent__messages">
+                <div class="message message--sent">
+                  <p class="message__text">
+                    Here are a few pictures. She's a happy girl!
+                  </p>
+                </div>
+
+                <div class="message message--sent">
+                  <p class="message__text">Can you make it?</p>
+                </div>
+              </div>
+
+              <!-- Received message (second group) -->
+              <div class="received__messages">
+                <div class="message message--received">
+                  <p class="message__text">
+                    She looks so happy! The time we discussed works. How long
+                    shall I take her out for?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Booking options (received, price options) -->
+              <div class="received__options">
+                <label class="message message--price-option" for="walk-30">
+                  <input
+                    type="radio"
+                    id="walk-30"
+                    name="walk"
+                    class="message__radio"
+                    value="30"
+                    disabled
+                  />
+                  <span class="message__label">30 minute walk</span>
+                  <span class="message__price">$29</span>
+                </label>
+
+                <label class="message message--price-option" for="walk-60">
+                  <input
+                    type="radio"
+                    id="walk-60"
+                    name="walk"
+                    class="message__radio"
+                    value="60"
+                    disabled
+                  />
+                  <span class="message__label">1 hour walk</span>
+                  <span class="message__price">$49</span>
+                </label>
+              </div>
+            </div>
+
+            <form class="chat-input">
+              <input
+                disabled
+                type="text"
+                class="chat-input__field"
+                placeholder="Type a message…"
+                aria-label="Type your message"
+              />
+              <button
+                class="chat-input__submit"
+                aria-label="Send message"
+                disabled
+              >
+                <i data-lucide="chevron-right" width="12" stroke-width="4"></i>
+              </button>
+            </form>
+          </div>
+        </article>
+
+        <!-- Content Section -->
+        <section class="content">
+          <h2 class="content__title">Simple booking</h2>
+          <p class="content__text">
+            Stay in touch with our dog walkers through the chat interface. This
+            makes it easy to discuss arrangements and make bookings. Once the
+            walk has been completed you can rate your walker and book again all
+            through the chat.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
