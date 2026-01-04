@@ -107,7 +107,7 @@ body::before {
   left: 0;
   width: 50%;
   height: 54%;
-  background: linear-gradient(248deg, var(--Pink-500), var(--Purple-500));
+  background: linear-gradient(242deg, var(--Pink-500), var(--Purple-500));
   border-bottom-right-radius: 100rem;
   border-bottom-left-radius: 0;
   pointer-events: none;
@@ -543,7 +543,7 @@ input[type="text"] {
 
   .content {
     text-align: left;
-    max-width: 28.7rem;
+    max-width: 28rem;
     padding: 0;
     margin: 0;
   }
