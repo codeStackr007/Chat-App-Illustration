@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
   font-family: var(--font-rubik);
   font-size: var(--fs-base);
@@ -99,33 +100,31 @@ input[type="radio"] {
    ===== BACKGROUND DECORATIONS =======
    ==================================== */
 
-/* Mobile Background - Top Left Gradient */
-body::before {
-  content: "";
-  position: fixed;
+/* Background Decorations - Using absolute positioning */
+.bg-decoration {
+  position: absolute;
+  pointer-events: none;
+}
+
+.bg-decoration--left {
   top: 0;
   left: 0;
   width: 50%;
-  height: 54%;
+  height: 55.4%;
   background: linear-gradient(242deg, var(--Pink-500), var(--Purple-500));
   border-bottom-right-radius: 100rem;
   border-bottom-left-radius: 0;
-  pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
-/* Mobile Background - Bottom Right Light Purple */
-body::after {
-  content: "";
-  position: fixed;
+.bg-decoration--right {
   bottom: 0;
   right: 0;
   width: 40%;
   height: 45%;
   background: hsla(276, 100%, 81%, 0.05);
   border-top-left-radius: 20rem;
-  pointer-events: none;
-  z-index: 0;
+  z-index: -2;
 }
 
 /* ====================================
@@ -138,7 +137,7 @@ body::after {
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  padding: 4rem 0rem;
+  padding: 6rem 0rem 4rem;
   position: relative;
   z-index: 1;
 }
@@ -420,12 +419,12 @@ input[type="text"] {
    ========= TABLET LAYOUT ============
    ==================================== */
 @media (min-width: 768px) {
-  body::before {
+  .bg-decoration--left {
     width: 45%;
     height: 58%;
   }
 
-  body::after {
+  .bg-decoration--right {
     width: 35%;
     height: 50%;
   }
@@ -458,7 +457,7 @@ input[type="text"] {
    ===== TABLET PRO LAYOUT (iPad Pro) =====
    ==================================== */
 @media (min-width: 1024px) {
-  body::before {
+  .bg-decoration--left {
     width: 34%;
     max-width: 510px;
     height: 82.5%;
@@ -468,7 +467,7 @@ input[type="text"] {
     border-bottom-left-radius: 30rem;
   }
 
-  body::after {
+  .bg-decoration--right {
     width: 40%;
     max-width: 520px;
     height: 67%;
@@ -510,7 +509,7 @@ input[type="text"] {
    ======= FULL DESKTOP (1440px+) ========
    ==================================== */
 @media (min-width: 1440px) {
-  body::before {
+  .bg-decoration--left {
     width: 29%;
     max-width: 560px;
     height: 81.5%;
@@ -520,7 +519,7 @@ input[type="text"] {
     border-bottom-left-radius: 30rem;
   }
 
-  body::after {
+  .bg-decoration--right {
     width: 31.8%;
     max-width: 580px;
     height: 78%;
