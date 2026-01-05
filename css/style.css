@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   font-family: var(--font-rubik);
   font-size: var(--fs-base);
-  background: var(--Gray-100);
+  background: var(--White);
   overflow-x: hidden;
   position: relative;
 }
